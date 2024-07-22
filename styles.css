@@ -1,0 +1,125 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --font-size-base: 16px;
+    --font-family: 'Roboto', sans-serif;
+    --margin-base: 16px;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: var(--margin-base);
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: var(--margin-base) 0;
+}
+
+section {
+    padding: var(--margin-base);
+}
+
+@media (min-width: 600px) {
+    body {
+        font-size: calc(var(--font-size-base) + 0.5vw);
+    }
+}
+
+@media (min-width: 1200px) {
+    body {
+        font-size: calc(var(--font-size-base) + 1vw);
+    }
+}
+
+/* Responsive cards */
+.card {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-item {
+    flex: 1 1 calc(33.333% - 20px);
+    margin: 10px;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+main {
+    margin-top: 60px; /* Space for the fixed header */
+}
+
+.section-relative {
+    position: relative;
+}
+
+.element-absolute {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+@media (max-width: 768px) {
+    .card-item {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .card-item {
+        flex: 1 1 100%;
+    }
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: var(--secondary-color);
+    border-radius: 4px;
+}
+body {
+    background-color: #f0f0f0;
+}
+
+header {
+    background-image: url('header-bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.responsive-image {
+    width: 100%;
+    height: auto;
+}
